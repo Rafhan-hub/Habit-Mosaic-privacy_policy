@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0E0E10" />
+<meta name="description" content="Privacy Policy for Habit Mosaic — a local-first habit tracker. No account, no cloud sync, no third-party trackers." />
+<title>Privacy Policy · Habit Mosaic</title>
+<link rel="icon" type="image/png" href="icon.png" />
+<link rel="apple-touch-icon" href="icon.png" />
+<style>
+  :root {
+    --bg: #0E0E10;
+    --bg-soft: #15151A;
+    --card: #1B1B22;
+    --card-2: #22222C;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.16);
+    --text: #F4F4F7;
+    --muted: #A8A8B3;
+    --muted-2: #8A8A95;
+    --accent: #B388FF;
+    --accent-2: #7C4DFF;
+    --green: #4ADE80;
+    --orange: #FFA940;
+    --cyan: #22B6DC;
+    --pink: #FF8FCB;
+    --yellow: #FFD54F;
+    --red: #FF6B6B;
+    --radius: 18px;
+    --radius-sm: 12px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background:
+      radial-gradient(900px 500px at 0% -10%, rgba(179,136,255,0.18), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(124,77,255,0.15), transparent 60%),
+      var(--bg);
+    background-attachment: fixed;
+  }
+  .container { max-width: 820px; margin: 0 auto; padding: 56px 24px 96px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 24px 0 8px; }
+  .icon-wrap {
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 32px;
+    background: linear-gradient(140deg, rgba(179,136,255,0.35), rgba(124,77,255,0.10));
+    box-shadow: 0 24px 60px -16px rgba(124,77,255,0.55), 0 0 0 1px rgba(255,255,255,0.06) inset;
+    margin-bottom: 22px;
+  }
+  .icon-wrap img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 26px;
+  }
+  h1 {
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 6px;
+    font-weight: 800;
+    background: linear-gradient(120deg, #fff 0%, #D6C4FF 60%, #B388FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .subtitle { color: var(--muted); font-size: 17px; margin: 0 0 22px; }
+  .meta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px;
+    color: var(--muted-2);
+    font-size: 13px;
+    margin-bottom: 26px;
+  }
+  .meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .meta a { color: var(--accent); text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+
+  /* Badges */
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 6px 0 36px; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    backdrop-filter: blur(6px);
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .dot.purple { background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+  .dot.green  { background: var(--green);  box-shadow: 0 0 12px var(--green); }
+  .dot.orange { background: var(--orange); box-shadow: 0 0 12px var(--orange); }
+  .dot.cyan   { background: var(--cyan);   box-shadow: 0 0 12px var(--cyan); }
+
+  /* TLDR card */
+  .tldr {
+    margin: 28px 0 40px;
+    padding: 22px 22px 8px;
+    background: linear-gradient(160deg, rgba(179,136,255,0.10), rgba(124,77,255,0.04));
+    border: 1px solid var(--border-strong);
+    border-radius: 22px;
+    box-shadow: 0 30px 60px -30px rgba(124,77,255,0.35);
+  }
+  .tldr h2 { margin-top: 0; font-size: 20px; letter-spacing: -0.01em; }
+  .tldr p { color: var(--muted); font-size: 15.5px; }
+
+  /* Section */
+  h2 {
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    margin: 48px 0 14px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 16.5px;
+    margin: 28px 0 8px;
+    font-weight: 700;
+    color: #EFEFF3;
+  }
+  h3 .kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+    margin-right: 10px;
+    background: rgba(179,136,255,0.18);
+    color: var(--accent);
+    font-size: 14px;
+    vertical-align: -7px;
+  }
+  p, li { color: #D9D9E0; }
+  a { color: var(--accent); }
+  strong { color: #fff; font-weight: 600; }
+  ul { padding-left: 22px; }
+  ul li { margin: 4px 0; }
+  hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+    margin: 40px 0;
+  }
+
+  /* Table */
+  .table-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--card);
+    margin: 14px 0;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { padding: 12px 16px; text-align: left; vertical-align: top; }
+  th {
+    background: var(--card-2);
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr + tr td { border-top: 1px solid var(--border); }
+  td.check { color: var(--green); font-weight: 600; }
+  td.cross { color: var(--red);   font-weight: 600; }
+  td.warn  { color: var(--orange);font-weight: 600; }
+
+  /* Plan tiles */
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0 4px; }
+  .plan {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    background: var(--card);
+    text-align: center;
+  }
+  .plan.recommended {
+    border-color: rgba(179,136,255,0.55);
+    background: linear-gradient(160deg, rgba(179,136,255,0.18), rgba(124,77,255,0.06));
+    box-shadow: 0 20px 40px -24px rgba(124,77,255,0.6);
+  }
+  .plan h4 { margin: 0 0 4px; font-size: 15.5px; font-weight: 700; }
+  .plan p { margin: 0; color: var(--muted); font-size: 13px; }
+  .plan .tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  /* Rights grid */
+  .rights { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 14px 0; }
+  .right {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 14px;
+    border-radius: var(--radius-sm);
+    background: var(--card);
+    border: 1px solid var(--border);
+  }
+  .right .ico {
+    flex: 0 0 32px; height: 32px;
+    border-radius: 9px;
+    background: rgba(179,136,255,0.16);
+    color: var(--accent);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .right b { color: #fff; display: block; margin-bottom: 2px; font-size: 14.5px; }
+  .right span { color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+
+  /* Callout */
+  .callout {
+    padding: 14px 18px;
+    border-left: 3px solid var(--accent);
+    background: rgba(179,136,255,0.07);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin: 14px 0;
+    color: #E6E6EC;
+    font-size: 14.5px;
+  }
+  .callout.warn { border-left-color: var(--orange); background: rgba(255,169,64,0.07); }
+
+  /* Footer */
+  footer {
+    margin-top: 64px;
+    padding: 30px 24px;
+    border-radius: 22px;
+    text-align: center;
+    background: linear-gradient(160deg, rgba(179,136,255,0.10), rgba(124,77,255,0.03));
+    border: 1px solid var(--border-strong);
+  }
+  footer img { width: 56px; height: 56px; border-radius: 14px; margin-bottom: 12px; }
+  footer p { margin: 4px 0; color: var(--muted); }
+  footer .brand { color: #fff; font-weight: 700; font-size: 16px; }
+  footer .tagline { color: var(--muted-2); font-size: 13px; margin-top: 6px; }
+
+  @media (max-width: 640px) {
+    .container { padding: 40px 18px 80px; }
+    h1 { font-size: 34px; }
+    .plans { grid-template-columns: 1fr; }
+    .rights { grid-template-columns: 1fr; }
+    table { font-size: 13.5px; }
+    th, td { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+  <main class="container">
+
+    <section class="hero">
+      <div class="icon-wrap">
+        <img src="icon.png" alt="Habit Mosaic app icon" />
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Habit Mosaic — your habits, your phone, nothing more.</p>
+      <div class="meta">
+        <span><strong style="color:#fff;font-weight:600">Effective:</strong> 13 May 2026</span>
+        <span><strong style="color:#fff;font-weight:600">Last updated:</strong> 13 May 2026</span>
+        <span><strong style="color:#fff;font-weight:600">Contact:</strong> <a href="mailto:skyloopapps@gmail.com">skyloopapps@gmail.com</a></span>
+      </div>
+
+      <div class="badges">
+        <span class="badge"><span class="dot purple"></span> Local-First</span>
+        <span class="badge"><span class="dot green"></span> No Account</span>
+        <span class="badge"><span class="dot orange"></span> No Ads</span>
+        <span class="badge"><span class="dot cyan"></span> No Trackers</span>
+      </div>
+    </section>
+
+    <div class="tldr">
+      <h2>The 30-second version</h2>
+      <p>Habit Mosaic doesn't ask for an account. It doesn't sync to a cloud. It doesn't run third-party analytics in the free tier. The <strong>only</strong> time anything leaves your phone is when <strong>you</strong> ask it to — to buy a subscription, restore a purchase, export a backup, or email us.</p>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Stays on your device</th>
+            <th>May reach us</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Habits, streaks, day notes</strong></td><td class="check">Always local</td><td class="cross">Never</td></tr>
+          <tr><td><strong>Mood entries &amp; reminders</strong></td><td class="check">Always local</td><td class="cross">Never</td></tr>
+          <tr><td><strong>Settings &amp; themes</strong></td><td class="check">Always local</td><td class="cross">Never</td></tr>
+          <tr><td><strong>Subscription purchase</strong></td><td>—</td><td class="warn">Anonymous purchase status (RevenueCat + Apple / Google)</td></tr>
+          <tr><td><strong>Support email</strong></td><td>—</td><td class="warn">Your email + the message you send</td></tr>
+          <tr><td><strong>Crash reports</strong></td><td>—</td><td class="warn">Only if you opt in via iOS / Android settings</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      If you uninstall Habit Mosaic without exporting a backup, your data is gone — permanently. We have no copy. That's the trade-off of being local-first, and it's the whole point.
+    </div>
+
+    <hr/>
+
+    <h2>1. Information we process</h2>
+
+    <h3><span class="kicker">1.1</span>Stored only on your device — we never see it</h3>
+    <p>Everything you create inside Habit Mosaic is saved to a local database on your device. We do <strong>not</strong> operate servers that hold this data:</p>
+    <ul>
+      <li>Habit names, categories, icons, colors, reminder times</li>
+      <li>Daily check-ins and streak history</li>
+      <li>Mood entries and day notes</li>
+      <li>App settings and theme preferences</li>
+    </ul>
+    <div class="callout warn">
+      <strong>Implication:</strong> If you uninstall the app or wipe your device without exporting a JSON backup first, this data cannot be recovered — by us or anyone else.
+    </div>
+
+    <h3><span class="kicker">1.2</span>When you purchase Habit Mosaic Premium</h3>
+    <p>Habit Mosaic Premium is available in three options:</p>
+    <div class="plans">
+      <div class="plan">
+        <h4>Monthly</h4>
+        <p>Try without commitment</p>
+      </div>
+      <div class="plan recommended">
+        <h4>Annual</h4>
+        <p>Best value</p>
+        <span class="tag">RECOMMENDED</span>
+      </div>
+      <div class="plan">
+        <h4>Lifetime</h4>
+        <p>Pay once, keep forever</p>
+      </div>
+    </div>
+    <p>Purchases are processed by Apple App Store (iOS / iPadOS), Google Play Billing (Android), and <strong>RevenueCat, Inc.</strong> — our subscription infrastructure provider. When you purchase, restore, or cancel, RevenueCat processes the following on our behalf:</p>
+
+    <div class="table-card">
+      <table>
+        <thead><tr><th>Field</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Anonymous app user ID (generated by RevenueCat)</td><td>Identify the subscription, not you</td></tr>
+          <tr><td>Receipt / purchase token from Apple or Google</td><td>Validate the purchase is real</td></tr>
+          <tr><td>Subscription status (active, expired, trial, refunded)</td><td>Unlock Premium features</td></tr>
+          <tr><td>Approximate country (from your store account)</td><td>Tax and currency reporting</td></tr>
+          <tr><td>Device platform + OS version</td><td>Receipt validation + aggregate analytics</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>We use this <strong>only</strong> to verify your subscription, restore purchases on reinstall, and meet tax, fraud, and chargeback obligations under Apple's and Google's developer terms. We <strong>never</strong> see your full name, email, payment card, or billing address — those stay with Apple or Google.</p>
+    <p>RevenueCat acts as our data processor. Their policy: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></p>
+
+    <h3><span class="kicker">1.3</span>If you email us</h3>
+    <p>If you write to <a href="mailto:skyloopapps@gmail.com">skyloopapps@gmail.com</a> for support, feedback, or a privacy request, we receive your email address and whatever you write. We use it only to reply and keep a record. <strong>You will not be added to any marketing list.</strong></p>
+
+    <h3><span class="kicker">1.4</span>Diagnostics &amp; crash data</h3>
+    <ul>
+      <li><strong>iOS:</strong> Aggregate crash data is delivered to us by Apple <strong>only if</strong> you've enabled <em>Settings → Privacy &amp; Security → Analytics &amp; Improvements → Share With App Developers</em>. Reports are anonymized.</li>
+      <li><strong>Android:</strong> Similar aggregate crash data is available via Google Play Console unless you've disabled it.</li>
+    </ul>
+    <p>We do <strong>not</strong> embed third-party crash or analytics SDKs (Firebase, Crashlytics, Sentry, Mixpanel, etc.) in the free tier. If we ever add one, this policy will be updated and you will be notified in-app first.</p>
+
+    <hr/>
+
+    <h2>2. Permissions the app requests</h2>
+    <div class="table-card">
+      <table>
+        <thead><tr><th>Permission</th><th>Why we ask</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Notifications</strong></td><td>To deliver the habit reminders <em>you</em> schedule.</td></tr>
+          <tr><td><strong>Exact alarms</strong> (Android)</td><td>To fire reminders at the exact time you choose.</td></tr>
+          <tr><td><strong>Receive boot completed</strong> (Android)</td><td>To restore reminders after a device restart.</td></tr>
+          <tr><td><strong>Live Activities</strong> (iOS)</td><td>To show your current habit on the Lock Screen / Dynamic Island.</td></tr>
+          <tr><td><strong>Photo library</strong> (iOS, optional)</td><td>Only when you choose to attach or export an image.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>You can revoke any permission in your device settings at any time. The app keeps working — you just lose the corresponding feature.</p>
+
+    <hr/>
+
+    <h2>3. Children's privacy</h2>
+    <p>Habit Mosaic is rated <strong>4+</strong> on the App Store and <strong>Everyone</strong> on Google Play. It is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has sent us personal information by email, contact us and we will delete it.</p>
+
+    <hr/>
+
+    <h2>4. How long we keep information</h2>
+    <div class="table-card">
+      <table>
+        <thead><tr><th>Data</th><th>Retention</th></tr></thead>
+        <tbody>
+          <tr><td><strong>On-device data</strong></td><td>Until you delete it, clear the app, uninstall, or wipe the device. We have <strong>no copy</strong>.</td></tr>
+          <tr><td><strong>Subscription records (RevenueCat)</strong></td><td>As long as Apple, Google, RevenueCat, and applicable tax law require — typically up to 7 years.</td></tr>
+          <tr><td><strong>Support emails</strong></td><td>Up to 2 years after the last reply, then deleted, unless we are legally required to retain longer.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr/>
+
+    <h2>5. Your rights</h2>
+    <p>Depending on where you live — EU/EEA (GDPR), UK (UK GDPR), California (CCPA / CPRA), Brazil (LGPD), and similar regimes — you may have the right to:</p>
+    <div class="rights">
+      <div class="right"><div class="ico">A</div><div><b>Access</b><span>Receive a copy of any information we hold about you.</span></div></div>
+      <div class="right"><div class="ico">R</div><div><b>Rectify</b><span>Correct information that is wrong.</span></div></div>
+      <div class="right"><div class="ico">E</div><div><b>Erase</b><span>Delete information — the "right to be forgotten."</span></div></div>
+      <div class="right"><div class="ico">O</div><div><b>Object / Restrict</b><span>Limit certain processing.</span></div></div>
+      <div class="right"><div class="ico">P</div><div><b>Portability</b><span>Receive your data in a portable format.</span></div></div>
+      <div class="right"><div class="ico">W</div><div><b>Withdraw consent</b><span>At any time, with no penalty.</span></div></div>
+      <div class="right"><div class="ico">C</div><div><b>Complain</b><span>Lodge a complaint with your local data protection authority.</span></div></div>
+      <div class="right"><div class="ico">D</div><div><b>Deletion</b><span>Email us and we will erase what we hold.</span></div></div>
+    </div>
+    <p>To exercise any of these, email <a href="mailto:skyloopapps@gmail.com">skyloopapps@gmail.com</a>. Because Habit Mosaic is local-first, the only personal information we typically hold is your RevenueCat purchase record (if you bought Premium) and any support emails you've sent us.</p>
+    <div class="callout">
+      <strong>California residents:</strong> We do <strong>not</strong> "sell" or "share" personal information as defined under the CCPA / CPRA. We do not use your data for cross-context behavioral advertising.
+    </div>
+
+    <hr/>
+
+    <h2>6. International transfers</h2>
+    <p>If you email us or buy a subscription, your information may be processed in countries other than where you live — including the United States, where RevenueCat is based. Where required, we rely on appropriate safeguards such as the EU Standard Contractual Clauses.</p>
+
+    <hr/>
+
+    <h2>7. Security</h2>
+    <p>We protect the limited information we do process with industry-standard measures, including HTTPS / TLS in transit. No method of transmission or storage is 100% secure, but because Habit Mosaic is local-first, the surface area for a breach on our side is intentionally minimal — your habits and notes are simply not on our servers to be breached.</p>
+
+    <hr/>
+
+    <h2>8. Subscription terms</h2>
+    <ul>
+      <li>Habit Mosaic Premium is available as auto-renewable <strong>monthly</strong> and <strong>annual</strong> subscriptions, plus a non-renewing <strong>lifetime</strong> purchase.</li>
+      <li>Payment is charged to your Apple ID or Google account at the time of purchase.</li>
+      <li>Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period.</li>
+      <li>Manage or cancel anytime — <strong>iOS:</strong> Settings → Apple ID → Subscriptions · <strong>Android:</strong> Play Store → Subscriptions.</li>
+      <li>A free trial, if offered, converts into a paid subscription automatically at the end of the trial unless cancelled beforehand.</li>
+      <li>Lifetime purchases are non-refundable except as required by applicable law and the platform's refund policy.</li>
+    </ul>
+    <p>Apple Standard EULA: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">apple.com/legal/internet-services/itunes/dev/stdeula</a> · Android users are subject to Google Play's terms.</p>
+
+    <hr/>
+
+    <h2>9. Changes to this Policy</h2>
+    <p>We may update this Policy as the app evolves. When we make material changes, we update the "Last updated" date above and, where appropriate, notify you in-app. Continued use after the update means you accept the revised Policy.</p>
+
+    <footer>
+      <img src="icon.png" alt="Habit Mosaic" />
+      <p class="brand">Habit Mosaic</p>
+      <p>Built by <strong style="color:#E6E6EC">Sky Loop Apps</strong></p>
+      <p><a href="mailto:skyloopapps@gmail.com">skyloopapps@gmail.com</a></p>
+      <p class="tagline">Your habits, your phone. Nothing more.</p>
+    </footer>
+
+  </main>
+</body>
+</html>
