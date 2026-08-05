@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#0E0E10" />
-<meta name="description" content="Privacy Policy for Habit Mosaic — a local-first habit tracker. No account, no cloud sync, no third-party trackers." />
+<meta name="description" content="Privacy Policy for Habit Mosaic — a local-first habit tracker. No account, no cloud sync; your habits never leave your device." />
 <title>Privacy Policy · Habit Mosaic</title>
 <link rel="icon" type="image/png" href="icon.png" />
 <link rel="apple-touch-icon" href="icon.png" />
@@ -277,22 +277,23 @@
       <h1>Privacy Policy</h1>
       <p class="subtitle">Habit Mosaic — your habits, your phone, nothing more.</p>
       <div class="meta">
-        <span><strong style="color:#fff;font-weight:600">Effective:</strong> 13 May 2026</span>
-        <span><strong style="color:#fff;font-weight:600">Last updated:</strong> 13 May 2026</span>
+        <span><strong style="color:#fff;font-weight:600">Effective:</strong> 5 August 2026</span>
+        <span><strong style="color:#fff;font-weight:600">Last updated:</strong> 5 August 2026</span>
         <span><strong style="color:#fff;font-weight:600">Contact:</strong> <a href="mailto:skyloopapps@gmail.com">skyloopapps@gmail.com</a></span>
       </div>
 
       <div class="badges">
         <span class="badge"><span class="dot purple"></span> Local-First</span>
         <span class="badge"><span class="dot green"></span> No Account</span>
-        <span class="badge"><span class="dot orange"></span> No Ads</span>
-        <span class="badge"><span class="dot cyan"></span> No Trackers</span>
+        <span class="badge"><span class="dot cyan"></span> No Cloud Sync</span>
+        <span class="badge"><span class="dot orange"></span> Ad-free with Premium</span>
       </div>
     </section>
 
     <div class="tldr">
       <h2>The 30-second version</h2>
-      <p>Habit Mosaic doesn't ask for an account. It doesn't sync to a cloud. It doesn't run third-party analytics in the free tier. The <strong>only</strong> time anything leaves your phone is when <strong>you</strong> ask it to — to buy a subscription, restore a purchase, export a backup, or email us.</p>
+      <p>Habit Mosaic doesn't ask for an account and doesn't sync your habits to a cloud. Everything you track — habits, streaks, notes, moods — stays on your phone, and we never receive it.</p>
+      <p>The free version is supported by <strong>ads</strong> from Google AdMob, and the app uses <strong>PostHog</strong> for anonymous usage analytics you can switch off any time in <em>Settings → Privacy</em>. <strong>Habit Mosaic Premium removes all ads.</strong></p>
     </div>
 
     <div class="table-card">
@@ -308,9 +309,11 @@
           <tr><td><strong>Habits, streaks, day notes</strong></td><td class="check">Always local</td><td class="cross">Never</td></tr>
           <tr><td><strong>Mood entries &amp; reminders</strong></td><td class="check">Always local</td><td class="cross">Never</td></tr>
           <tr><td><strong>Settings &amp; themes</strong></td><td class="check">Always local</td><td class="cross">Never</td></tr>
+          <tr><td><strong>Ads (free version)</strong></td><td>—</td><td class="warn">Advertising ID + device / network data → Google AdMob</td></tr>
+          <tr><td><strong>Usage analytics</strong></td><td>—</td><td class="warn">Anonymous events → PostHog (opt out any time)</td></tr>
           <tr><td><strong>Subscription purchase</strong></td><td>—</td><td class="warn">Anonymous purchase status (RevenueCat + Apple / Google)</td></tr>
           <tr><td><strong>Support email</strong></td><td>—</td><td class="warn">Your email + the message you send</td></tr>
-          <tr><td><strong>Crash reports</strong></td><td>—</td><td class="warn">Only if you opt in via iOS / Android settings</td></tr>
+          <tr><td><strong>Backups you export</strong></td><td>—</td><td class="warn">Only to the destination you choose</td></tr>
         </tbody>
       </table>
     </div>
@@ -335,7 +338,38 @@
       <strong>Implication:</strong> If you uninstall the app or wipe your device without exporting a JSON backup first, this data cannot be recovered — by us or anyone else.
     </div>
 
-    <h3><span class="kicker">1.2</span>When you purchase Habit Mosaic Premium</h3>
+    <h3><span class="kicker">1.2</span>Advertising (free version only)</h3>
+    <p>The free version of Habit Mosaic shows ads supplied by <strong>Google AdMob</strong>. Formats include banners, interstitials between actions, rewarded ads you choose to watch, and an ad when the app opens.</p>
+    <div class="table-card">
+      <table>
+        <thead><tr><th>Data Google receives</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Advertising ID</strong> (Google Advertising ID on Android, IDFA on iOS)</td><td>Ad delivery, frequency capping, measurement</td></tr>
+          <tr><td>Coarse device &amp; app info (model, OS version, app version, language)</td><td>Ad compatibility and reporting</td></tr>
+          <tr><td>IP address</td><td>Approximate location for relevance, fraud prevention</td></tr>
+          <tr><td>Ad interaction events (impressions, clicks)</td><td>Billing and measurement</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      We <strong>never</strong> send Google your habits, notes, moods, or any content you create. <strong>Purchasing Premium removes all ads</strong> — and with them, this entire data flow.
+    </div>
+    <p>Google acts as an independent controller for data collected through AdMob, governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. You can limit ad personalisation on your device at any time — <strong>Android:</strong> Settings → Privacy → Ads · <strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking.</p>
+
+    <h3><span class="kicker">1.3</span>Usage analytics</h3>
+    <p>Habit Mosaic uses <strong>PostHog</strong> to understand how the app is used so we can improve it. This is <strong>on by default</strong> and can be switched off at any time in <em>Settings → Privacy → Share usage data</em>. Turning it off stops all further collection.</p>
+    <p>Events are identified by a random ID generated on your device — not your name, email, or account. We collect:</p>
+    <ul>
+      <li>Lifecycle events: app opened, app backgrounded, install, update</li>
+      <li>Feature events such as <code>habit_created</code>, <code>habit_completed</code>, <code>mood_set</code>, <code>theme_changed</code>, <code>language_changed</code>, <code>backup_exported</code>, <code>paywall_shown</code>, <code>purchase_completed</code></li>
+      <li>Whether you have an active subscription</li>
+    </ul>
+    <div class="callout warn">
+      <strong>Never collected:</strong> habit names, descriptions, day notes, mood text, or reminder times. Events record <em>that</em> something happened — never <em>what</em> it said.
+    </div>
+    <p>PostHog, Inc. processes this on its <strong>United States</strong> infrastructure. Their policy: <a href="https://posthog.com/privacy">posthog.com/privacy</a></p>
+
+    <h3><span class="kicker">1.4</span>When you purchase Habit Mosaic Premium</h3>
     <p>Habit Mosaic Premium is available in three options:</p>
     <div class="plans">
       <div class="plan">
@@ -369,46 +403,69 @@
     <p>We use this <strong>only</strong> to verify your subscription, restore purchases on reinstall, and meet tax, fraud, and chargeback obligations under Apple's and Google's developer terms. We <strong>never</strong> see your full name, email, payment card, or billing address — those stay with Apple or Google.</p>
     <p>RevenueCat acts as our data processor. Their policy: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></p>
 
-    <h3><span class="kicker">1.3</span>If you email us</h3>
+    <h3><span class="kicker">1.5</span>If you email us</h3>
     <p>If you write to <a href="mailto:skyloopapps@gmail.com">skyloopapps@gmail.com</a> for support, feedback, or a privacy request, we receive your email address and whatever you write. We use it only to reply and keep a record. <strong>You will not be added to any marketing list.</strong></p>
 
-    <h3><span class="kicker">1.4</span>Diagnostics &amp; crash data</h3>
+    <h3><span class="kicker">1.6</span>Backups you export</h3>
+    <p>Exporting a backup produces a JSON file containing your habits and history. <strong>You</strong> choose where it goes — a share sheet, cloud drive, email, or local storage. Once it leaves the app it is governed by the privacy policy of wherever you sent it. We never receive a copy.</p>
+
+    <h3><span class="kicker">1.7</span>Diagnostics &amp; crash data</h3>
     <ul>
       <li><strong>iOS:</strong> Aggregate crash data is delivered to us by Apple <strong>only if</strong> you've enabled <em>Settings → Privacy &amp; Security → Analytics &amp; Improvements → Share With App Developers</em>. Reports are anonymized.</li>
       <li><strong>Android:</strong> Similar aggregate crash data is available via Google Play Console unless you've disabled it.</li>
     </ul>
-    <p>We do <strong>not</strong> embed third-party crash or analytics SDKs (Firebase, Crashlytics, Sentry, Mixpanel, etc.) in the free tier. If we ever add one, this policy will be updated and you will be notified in-app first.</p>
 
     <hr/>
 
-    <h2>2. Permissions the app requests</h2>
+    <h2>2. Who we share data with</h2>
+    <p>We do <strong>not</strong> sell your personal information. We share only what is described above, with:</p>
+    <div class="table-card">
+      <table>
+        <thead><tr><th>Third party</th><th>What they receive</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google AdMob</strong></td><td>Advertising ID, device / network data, ad events</td><td>Serve and measure ads in the free version</td></tr>
+          <tr><td><strong>PostHog, Inc.</strong></td><td>Anonymous usage events, random device ID</td><td>Product analytics (opt-out)</td></tr>
+          <tr><td><strong>RevenueCat, Inc.</strong></td><td>Anonymous user ID, receipt, subscription status</td><td>Subscription management</td></tr>
+          <tr><td><strong>Apple / Google</strong></td><td>Payment and receipt data</td><td>Process purchases</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>We may also disclose information where legally required, or to protect our rights and users' safety.</p>
+
+    <hr/>
+
+    <h2>3. Permissions the app requests</h2>
     <div class="table-card">
       <table>
         <thead><tr><th>Permission</th><th>Why we ask</th></tr></thead>
         <tbody>
-          <tr><td><strong>Notifications</strong></td><td>To deliver the habit reminders <em>you</em> schedule.</td></tr>
-          <tr><td><strong>Exact alarms</strong> (Android)</td><td>To fire reminders at the exact time you choose.</td></tr>
+          <tr><td><strong>Notifications</strong></td><td>To deliver the habit reminders <em>you</em> schedule, and the ongoing daily-progress notification.</td></tr>
           <tr><td><strong>Receive boot completed</strong> (Android)</td><td>To restore reminders after a device restart.</td></tr>
           <tr><td><strong>Live Activities</strong> (iOS)</td><td>To show your current habit on the Lock Screen / Dynamic Island.</td></tr>
-          <tr><td><strong>Photo library</strong> (iOS, optional)</td><td>Only when you choose to attach or export an image.</td></tr>
+          <tr><td><strong>Advertising ID</strong> (Android)</td><td>Ad delivery and measurement in the free version. Unused once you have Premium.</td></tr>
         </tbody>
       </table>
+    </div>
+    <div class="callout">
+      Habit Mosaic requests <strong>no</strong> access to your photos, media library, contacts, camera, microphone, precise location, or files. Backups are read and written through your system's file picker, which grants access only to the single file you pick.
     </div>
     <p>You can revoke any permission in your device settings at any time. The app keeps working — you just lose the corresponding feature.</p>
 
     <hr/>
 
-    <h2>3. Children's privacy</h2>
-    <p>Habit Mosaic is rated <strong>4+</strong> on the App Store and <strong>Everyone</strong> on Google Play. It is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has sent us personal information by email, contact us and we will delete it.</p>
+    <h2>4. Children's privacy</h2>
+    <p>Habit Mosaic is rated <strong>4+</strong> on the App Store and <strong>Everyone</strong> on Google Play. It is not directed at children under 13, and we do not knowingly collect personal information from children. Ads are configured for a general audience. If you believe a child has sent us personal information by email, contact us and we will delete it.</p>
 
     <hr/>
 
-    <h2>4. How long we keep information</h2>
+    <h2>5. How long we keep information</h2>
     <div class="table-card">
       <table>
         <thead><tr><th>Data</th><th>Retention</th></tr></thead>
         <tbody>
           <tr><td><strong>On-device data</strong></td><td>Until you delete it, clear the app, uninstall, or wipe the device. We have <strong>no copy</strong>.</td></tr>
+          <tr><td><strong>Analytics events (PostHog)</strong></td><td>Per our project retention settings. Opting out stops all further collection.</td></tr>
+          <tr><td><strong>Advertising data (Google)</strong></td><td>Per the Google Privacy Policy. Removed from the flow entirely once you have Premium.</td></tr>
           <tr><td><strong>Subscription records (RevenueCat)</strong></td><td>As long as Apple, Google, RevenueCat, and applicable tax law require — typically up to 7 years.</td></tr>
           <tr><td><strong>Support emails</strong></td><td>Up to 2 years after the last reply, then deleted, unless we are legally required to retain longer.</td></tr>
         </tbody>
@@ -417,7 +474,7 @@
 
     <hr/>
 
-    <h2>5. Your rights</h2>
+    <h2>6. Your rights</h2>
     <p>Depending on where you live — EU/EEA (GDPR), UK (UK GDPR), California (CCPA / CPRA), Brazil (LGPD), and similar regimes — you may have the right to:</p>
     <div class="rights">
       <div class="right"><div class="ico">A</div><div><b>Access</b><span>Receive a copy of any information we hold about you.</span></div></div>
@@ -429,24 +486,25 @@
       <div class="right"><div class="ico">C</div><div><b>Complain</b><span>Lodge a complaint with your local data protection authority.</span></div></div>
       <div class="right"><div class="ico">D</div><div><b>Deletion</b><span>Email us and we will erase what we hold.</span></div></div>
     </div>
-    <p>To exercise any of these, email <a href="mailto:skyloopapps@gmail.com">skyloopapps@gmail.com</a>. Because Habit Mosaic is local-first, the only personal information we typically hold is your RevenueCat purchase record (if you bought Premium) and any support emails you've sent us.</p>
-    <div class="callout">
-      <strong>California residents:</strong> We do <strong>not</strong> "sell" or "share" personal information as defined under the CCPA / CPRA. We do not use your data for cross-context behavioral advertising.
+    <p>To exercise any of these, email <a href="mailto:skyloopapps@gmail.com">skyloopapps@gmail.com</a>. Because Habit Mosaic is local-first, most of what you create never reaches us — for your habit data these rights are exercised directly on your device, where you hold the only copy.</p>
+    <p><strong>Legal bases (EEA / UK):</strong> <em>consent</em> for analytics and personalised advertising, withdrawable at any time; <em>contract</em> for processing your subscription; <em>legitimate interests</em> for security, fraud prevention, and basic service operation.</p>
+    <div class="callout warn">
+      <strong>California residents:</strong> We do <strong>not</strong> sell personal information for money. However, sharing an advertising identifier with an ad network may qualify as <strong>"sharing" for cross-context behavioural advertising</strong> under the CCPA / CPRA. You can stop it by turning off ad personalisation in your device settings, or by purchasing Premium, which removes ads entirely.
     </div>
 
     <hr/>
 
-    <h2>6. International transfers</h2>
-    <p>If you email us or buy a subscription, your information may be processed in countries other than where you live — including the United States, where RevenueCat is based. Where required, we rely on appropriate safeguards such as the EU Standard Contractual Clauses.</p>
+    <h2>7. International transfers</h2>
+    <p>We are based in Pakistan. Our service providers — Google, PostHog, RevenueCat, and Apple — process data in the United States and other countries. Where information is transferred out of the EEA or UK, those providers rely on appropriate safeguards such as the European Commission's Standard Contractual Clauses.</p>
 
     <hr/>
 
-    <h2>7. Security</h2>
+    <h2>8. Security</h2>
     <p>We protect the limited information we do process with industry-standard measures, including HTTPS / TLS in transit. No method of transmission or storage is 100% secure, but because Habit Mosaic is local-first, the surface area for a breach on our side is intentionally minimal — your habits and notes are simply not on our servers to be breached.</p>
 
     <hr/>
 
-    <h2>8. Subscription terms</h2>
+    <h2>9. Subscription terms</h2>
     <ul>
       <li>Habit Mosaic Premium is available as auto-renewable <strong>monthly</strong> and <strong>annual</strong> subscriptions, plus a non-renewing <strong>lifetime</strong> purchase.</li>
       <li>Payment is charged to your Apple ID or Google account at the time of purchase.</li>
@@ -459,7 +517,7 @@
 
     <hr/>
 
-    <h2>9. Changes to this Policy</h2>
+    <h2>10. Changes to this Policy</h2>
     <p>We may update this Policy as the app evolves. When we make material changes, we update the "Last updated" date above and, where appropriate, notify you in-app. Continued use after the update means you accept the revised Policy.</p>
 
     <footer>
